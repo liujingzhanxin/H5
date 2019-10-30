@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<style>
+			
+			 div{
+			 	
+			 	width: 100px;
+			 	height: 100px;
+			 	background: red;
+			 }
+			
+		</style>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script>
+			
+/*touchstart: 手指触摸屏幕时触发
+touchmove: 手指在屏幕上移动时触发
+touchend: 手指离开屏幕时触发*/
+			$(function(){
+				//获取dom对象
+				var div=$("div")[0];
+				div.addEventListener("touchstart",function(){
+					
+					console.info("touchstart: 手指触摸屏幕时触发");
+				})
+				div.addEventListener("touchmove",function(){
+					
+					console.info("touchmove: 手指在屏幕上移动时触发");
+				})
+				div.addEventListener("touchend",function(){
+					
+					console.info("touchend: 手指离开屏幕时触发");
+				})
+				
+				//触屏异常中断
+				/*div.addEventListener("touchcancel",function(){
+					
+					console.info("touchcancel: 触屏异常中断");
+				})*/
+			})
+		</script>
+	</head>
+	<body>
+		
+		<div></div>
+	</body>
+</html>

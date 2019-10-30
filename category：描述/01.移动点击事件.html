@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+			
+			
+		</style>
+		
+		
+	</head>
+	<body>
+		<div ></div>
+		
+		<script>
+		
+			var div=document.querySelector("div");
+			/*div.onclick=function(){
+				alert("点击了");
+				
+			}*/
+			div.addEventListener("click",function(){
+				
+				console.info("点击了");
+			});
+			div.addEventListener("touchstart",function(){
+				
+				console.info("touchstart");
+			});
+			div.addEventListener("touchmove",function(){
+				
+				console.info("touchmove点击了");
+			});
+			div.addEventListener("touchend",function(){
+				
+				console.info("touchendmmm");
+			});
+		</script>
+	</body>
+</html>

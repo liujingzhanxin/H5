@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<style>
+			.swiper-container{
+
+width: 400px;
+
+height: 150px;
+
+}
+
+.swiper-slide{
+
+    width: 100%;
+
+    height: 150px;
+
+}
+
+.swiper-slide img{
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="swiper-container">
+
+			<div class="swiper-wrapper">
+			
+				<div class="swiper-slide"><img src="uploads/l1.jpg"/></div>
+				
+				 <div class="swiper-slide"><img src="uploads/l2.jpg"></div>
+				
+				<div class="swiper-slide"><img src="uploads/l3.jpg" alt=""></div>
+			
+			</div>
+
+
+
+</div>
+
+<script type="text/javascript" src="js/swiper.min.js" ></script>
+<script>
+	/*''*/
+	var mySwiper = new Swiper (document.querySelector(".swiper-container"), {
+
+        // 轮播图的方向，也可以是vertical方向
+
+        direction:'horizontal',
+
+        //播放速度
+
+        loop: true,
+
+        // 自动播放时间
+
+        autoplay:true,
+
+        // 播放的速度
+
+        speed:2000,
+
+       
+
+　　// 这样，即使我们滑动之后， 定时器也不会被清除
+
+　　autoplayDisableOnInteraction : false,
+
+      });
+</script>
+	</body>
+</html>

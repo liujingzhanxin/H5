@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<style>
+			*{
+				
+				margin: 0px;
+				padding: 0px;
+			}
+			 div{
+			 	
+			 	width: 100px;
+			 	height: 100px;
+			 	background: red;
+			 	
+			 }
+			
+		</style>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script>
+			
+/*touchstart: 手指触摸屏幕时触发
+touchmove: 手指在屏幕上移动时触发
+touchend: 手指离开屏幕时触发*/
+			$(function(){
+				//获取dom对象
+				var div=$("div")[0];
+				
+				var startX,startY ,moveX,moveY,distanceX,distanceY;
+				
+				div.addEventListener("touchstart",function(e){
+					//起始坐标
+					startX=e.targetTouches[0].clientX;
+					startY=e.targetTouches[0].clientY;
+					console.log(startX+"---"+startY)
+				})
+				div.addEventListener("touchmove",function(e){
+					moveX=e.targetTouches[0].clientX;
+					moveY=e.targetTouches[0].clientY;
+					
+					//用移动后的坐标-起始坐标  距离的偏差
+					distanceX=moveX-startX;
+					distanceY=moveY-startY;
+					
+					/*使用js设置偏移*/
+					div.style.transform="translate("+distanceX+"px,"+distanceY+"px)";
+					
+				})
+				div.addEventListener("touchend",function(e){
+					
+				 
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		
+		<div>1</div>
+		<div>2</div>
+	</body>
+</html>

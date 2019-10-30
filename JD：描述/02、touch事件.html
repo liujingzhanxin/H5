@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<style>
+			*{
+				
+				margin: 0px;
+				padding: 0px;
+			}
+			 div{
+			 	
+			 	width: 100px;
+			 	height: 100px;
+			 	/*background: red;*/
+			 	background: linear-gradient(to right,red,blue);
+			 }
+			
+		</style>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script>
+			
+/*touchstart: 手指触摸屏幕时触发
+touchmove: 手指在屏幕上移动时触发
+touchend: 手指离开屏幕时触发*/
+			$(function(){
+				//获取dom对象
+				var div=$("div")[0];
+				div.addEventListener("touchstart",function(e){
+					console.info(e);
+					
+				//	console.info(e.targetTouches[0].clientX+"---"+e.targetTouches[0].clientY);
+					
+				})
+				div.addEventListener("touchmove",function(e){
+					
+					/*console.info(e);*/
+				})
+				div.addEventListener("touchend",function(e){
+					//console.info(e.changedTouches);
+				
+				})
+				
+				//触屏异常中断
+				/div.addEventListener("touchcancel",function(){
+					
+					//console.info("touchcancel: 触屏异常中断");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		
+		<div></div>
+	</body>
+</html>

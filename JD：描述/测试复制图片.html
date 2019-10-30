@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script>
+			$(function(){
+				//原来的
+			var firstli=	$(".jd_bannerImg>li:first");
+			var lastli=	$(".jd_bannerImg>li:last");	
+			
+			console.info(firstli);
+			console.info(lastli);
+			
+			//父子级添加元素： append  prepend
+			
+			/*自己创建元素添加*/
+			
+			/*var li=	$('<li><a href="javascript:;"> 1 </a> </li>' );*/
+			
+			/*可以将原来的元素复制,相当重新创建元素  jQ：clone(true)
+			 clone(flase)：只复制元素，不复制事件
+			 clone(true)：深复制复制元素，和复制事件
+			 
+			 * 
+			 * 
+			 * */
+			var  newfirstli =  firstli.clone(true)
+			
+		$(".jd_bannerImg").append(newfirstli);
+			
+			
+			//同级添加元素：after  before
+			
+			})
+			
+			
+		</script>
+	</head>
+	<body>
+		
+		<ul class="jd_bannerImg" >
+				
+				
+				
+				
+	            <li>
+	                <a href="javascript:;">
+	                    1
+	                </a>
+	            </li> 
+	            <li>
+	                <a href="javascript:;">
+	                    2
+	                </a>
+	            </li>
+	             <li>
+	                <a href="javascript:;">
+	                    3
+	                </a>
+	            </li>
+	             <li>
+	                <a href="javascript:;">
+	                    4
+	                </a>
+	            </li>
+	             <li>
+	                <a href="javascript:;">
+	                   5
+	                </a>
+	            </li>
+	             <li>
+	                <a href="javascript:;">
+	                    6
+	                </a>
+	            </li>
+	             <li>
+	                <a href="javascript:;">
+	                   7
+	                </a>
+	            </li>
+	             <li>
+	                <a href="javascript:;">
+	                   8
+	                </a>
+	            </li>
+	           
+            </ul>
+		
+		
+	</body>
+</html>

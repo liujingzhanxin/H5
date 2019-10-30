@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<style>
+			.box{
+				width: 320px;
+				height: 320px;
+				margin: 100px auto;
+				background: pink;
+				position: relative;
+			}
+			
+			.tap{
+				
+				width: 200px;
+				height: 200px;
+				background: red;
+				text-align: center;
+				line-height: 200px;
+				font-size: 50px;
+				margin: -100px 0 0 -100px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+			}
+			.click{
+				
+				width: 300px;
+				height: 300px;
+				background: yellow;
+				text-align: center;
+				line-height: 300px;
+				font-size: 50px;
+				margin: -150px 0 0 -150px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+			}
+		</style>
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+		<script type="text/javascript" src="js/fastclick.js" ></script>
+		<script>
+			/*$(function(){*/
+				window.onload=function(){
+				var click=document.querySelector(".click");
+				
+				var tap=document.querySelector(".tap");
+				/*click.onclick=function(){
+					console.info(123);
+				}*/
+				
+				/*$(".tap").on("tap",function(){
+					alert("1");
+					$(this).hide();
+				})*/
+				/*fastclick.js*/
+				/*1移动和pc都可以使用，不会点透，不会延迟*/
+			/*	方式1:js*/
+				if ('addEventListener' in document) {  
+
+					    document.addEventListener('DOMContentLoaded', function() {  
+					
+					        FastClick.attach(document.body);  
+					
+					    }, false);  
+					
+				}  ;
+			/*方式2:jQ	*/		
+			/*$(function() {  
+			
+			    FastClick.attach(document.body);  
+			
+			});*/
+
+                 /*tap.addEventListener("click",function(){
+                 	
+                 	tap.style.visibility="hidden";
+                 	
+                 })*/
+                 
+                 /*click.addEventListener("click",function(){
+                 	
+                 	
+                 	console.info(123);
+                 })*/
+				
+				$(".tap").on("click",function(){
+					
+					$(this).hide();
+				});
+				$(".click").on("click",function(){
+					
+					console.info(123);
+				});
+			};
+		</script>
+		
+	</head>
+	<body>
+		<div  class="box">
+			<div  class="click">1 click</div>
+			<div   class="tap">2 tap</div>
+		
+		</div>
+		
+		
+	</body>
+</html>
